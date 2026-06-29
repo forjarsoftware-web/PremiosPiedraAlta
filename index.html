@@ -4,15 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Premios Piedra Alta al Deporte — La gran gala anual de la Intendencia de Florida que celebra la excelencia deportiva. Información, agenda, inscripciones y galería del evento." />
+  <meta name="theme-color" content="#0b0b0f" />
   <title>Premios Piedra Alta al Deporte 2026 · Intendencia de Florida</title>
+
+  <!-- Open Graph / Redes sociales -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Premios Piedra Alta al Deporte 2026" />
+  <meta property="og:description" content="La gran gala anual de la Intendencia de Florida que celebra la excelencia deportiva. Sábado 14 de noviembre de 2026." />
+  <meta property="og:image" content="logo.jpeg" />
+  <meta property="og:image:width" content="1254" />
+  <meta property="og:image:height" content="1254" />
+  <meta property="og:image:alt" content="Logo Premios Piedra Alta al Deporte" />
+  <meta property="og:locale" content="es_UY" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="logo.jpeg" />
+  <meta name="twitter:title" content="Premios Piedra Alta al Deporte 2026" />
+  <meta name="twitter:description" content="La gran gala anual de la Intendencia de Florida que celebra la excelencia deportiva." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=20260629c" />
+  <link rel="stylesheet" href="css/styles.css?v=20260629m" />
   <link rel="icon" href="logo.jpeg" />
 </head>
 <body data-phase="previo">
+
+  <!-- ============ SPRITE DE ICONOS (SVG, estilo línea) ============ -->
+  <svg width="0" height="0" class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3.2"/></symbol>
+    <symbol id="i-mic" viewBox="0 0 24 24"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M5 10v2a7 7 0 0 0 14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></symbol>
+    <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/><line x1="8.5" y1="11.5" x2="8.5" y2="11.5"/><line x1="12" y1="11.5" x2="12" y2="11.5"/><line x1="15.5" y1="11.5" x2="15.5" y2="11.5"/></symbol>
+    <symbol id="i-medal" viewBox="0 0 24 24"><path d="M7.21 4 8.5 9.5"/><path d="M16.79 4 15.5 9.5"/><path d="M5 4h14"/><circle cx="12" cy="15" r="6"/><path d="M12 12.5 13 15h-2l1-2.5"/></symbol>
+    <symbol id="i-toast" viewBox="0 0 24 24"><path d="M5 8h14"/><path d="M8 22h8"/><path d="M12 15v7"/><path d="M19 3 17 13a5 5 0 0 1-10 0L5 3z"/></symbol>
+    <symbol id="i-whistle" viewBox="0 0 24 24"><circle cx="9" cy="14" r="6"/><path d="M14 11.5 22 8"/><path d="M14 9 22 6"/><path d="M9 8V4"/><path d="M7 4h4"/></symbol>
+    <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m12 7 4 3-1.5 4.7h-5L8 10z"/><path d="m12 2 0 5M2.5 9 8 10M21.5 9 16 10M5.5 19l3.5-4.3M18.5 19 15 14.7"/></symbol>
+    <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1.4"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+    <symbol id="i-crown" viewBox="0 0 24 24"><path d="m2 5 4.5 4L12 3l5.5 6L22 5l-2 13H4L2 5z"/><path d="M5 18h14"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.49 4.04 3 5.5l7 7Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="M8 2v4"/><path d="M16 2v4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-shirt" viewBox="0 0 24 24"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10c0 1.1.9 2 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></symbol>
+  </svg>
 
   <!-- ============ PANEL DEMO: Selector de fase ============ -->
   <div class="demo-switcher" id="demoSwitcher">
@@ -52,9 +90,16 @@
         <a href="#agenda">Agenda</a>
         <a href="#categorias">Categorías</a>
         <a href="#conferencias">Conferencias</a>
-        <a href="#autoridades">Autoridades</a>
-        <a href="#galeria">Galería</a>
-        <a href="#ubicacion">Ubicación</a>
+        <div class="nav__more">
+          <button type="button" class="nav__more-btn" aria-haspopup="true" aria-expanded="false">
+            Más <svg class="ico nav__more-caret"><use href="#i-chevron"/></svg>
+          </button>
+          <div class="nav__dropdown">
+            <a href="#autoridades">Autoridades</a>
+            <a href="#galeria">Galería</a>
+            <a href="#ubicacion">Ubicación</a>
+          </div>
+        </div>
       </nav>
       <a href="#inscripcion" class="btn btn--gold nav__cta" data-show="previo">Inscríbete</a>
       <a href="#vivo" class="btn btn--live nav__cta" data-show="encurso"><span class="live-dot"></span>En vivo</a>
@@ -158,27 +203,45 @@
       <div class="timeline">
         <div class="timeline__item">
           <span class="timeline__time">19:00</span>
-          <div class="timeline__body"><h3>Alfombra roja</h3><p>Recepción de invitados, prensa y sesión de fotografías oficial.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-camera"/></svg></span>
+            <div class="timeline__content"><h3>Alfombra roja</h3><p>Recepción de invitados, prensa y sesión de fotografías oficial.</p></div>
+          </div>
         </div>
         <div class="timeline__item">
           <span class="timeline__time">20:00</span>
-          <div class="timeline__body"><h3>Apertura de la gala</h3><p>Acto inaugural y palabras de bienvenida de las autoridades.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-mic"/></svg></span>
+            <div class="timeline__content"><h3>Apertura de la gala</h3><p>Acto inaugural y palabras de bienvenida de las autoridades.</p></div>
+          </div>
         </div>
         <div class="timeline__item">
           <span class="timeline__time">20:30</span>
-          <div class="timeline__body"><h3>Primera ronda de premiaciones</h3><p>Entrega de las primeras ocho categorías de la noche.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-trophy"/></svg></span>
+            <div class="timeline__content"><h3>Primera ronda de premiaciones</h3><p>Entrega de las primeras ocho categorías de la noche.</p></div>
+          </div>
         </div>
         <div class="timeline__item">
           <span class="timeline__time">21:15</span>
-          <div class="timeline__body"><h3>Conferencia magistral</h3><p>«Mentalidad de campeón», a cargo de una figura invitada de talla internacional.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-chat"/></svg></span>
+            <div class="timeline__content"><h3>Conferencia magistral</h3><p>«Mentalidad de campeón», a cargo de una figura invitada de talla internacional.</p></div>
+          </div>
         </div>
         <div class="timeline__item">
           <span class="timeline__time">22:00</span>
-          <div class="timeline__body"><h3>Segunda ronda y premio mayor</h3><p>Entrega del galardón al Deportista del Año y reconocimiento a la trayectoria.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-medal"/></svg></span>
+            <div class="timeline__content"><h3>Segunda ronda y premio mayor</h3><p>Entrega del galardón al Deportista del Año y reconocimiento a la trayectoria.</p></div>
+          </div>
         </div>
         <div class="timeline__item">
           <span class="timeline__time">23:00</span>
-          <div class="timeline__body"><h3>Cierre y brindis</h3><p>Show musical en vivo y cóctel de celebración.</p></div>
+          <div class="timeline__body">
+            <span class="timeline__icon"><svg class="ico"><use href="#i-toast"/></svg></span>
+            <div class="timeline__content"><h3>Cierre y brindis</h3><p>Show musical en vivo y cóctel de celebración.</p></div>
+          </div>
         </div>
       </div>
     </div>
@@ -193,14 +256,14 @@
         <p class="section__lead">Dieciséis galardones que abarcan todas las disciplinas y protagonistas del deporte.</p>
       </div>
       <div class="cats">
-        <article class="cat"><span class="cat__icon">🏆</span><h3>Deportista del Año</h3><p>El máximo galardón de la noche.</p></article>
-        <article class="cat"><span class="cat__icon">🥇</span><h3>Revelación</h3><p>El talento emergente del año.</p></article>
-        <article class="cat"><span class="cat__icon">👟</span><h3>Mejor Entrenador</h3><p>Liderazgo y estrategia.</p></article>
-        <article class="cat"><span class="cat__icon">⚽</span><h3>Deporte de Equipo</h3><p>La mejor colectividad.</p></article>
-        <article class="cat"><span class="cat__icon">♿</span><h3>Deporte Paralímpico</h3><p>Superación sin límites.</p></article>
-        <article class="cat"><span class="cat__icon">🌟</span><h3>Trayectoria</h3><p>Toda una vida en el deporte.</p></article>
-        <article class="cat"><span class="cat__icon">💪</span><h3>Mejor Afición</h3><p>El aliento que mueve.</p></article>
-        <article class="cat"><span class="cat__icon">🏅</span><h3>Premio Fair Play</h3><p>Juego limpio y valores.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-trophy"/></svg></span><h3>Deportista del Año</h3><p>El máximo galardón de la noche.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-star"/></svg></span><h3>Revelación</h3><p>El talento emergente del año.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-whistle"/></svg></span><h3>Mejor Entrenador</h3><p>Liderazgo y estrategia.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-ball"/></svg></span><h3>Deporte de Equipo</h3><p>La mejor colectividad.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-access"/></svg></span><h3>Deporte Paralímpico</h3><p>Superación sin límites.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-crown"/></svg></span><h3>Trayectoria</h3><p>Toda una vida en el deporte.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-heart"/></svg></span><h3>Mejor Afición</h3><p>El aliento que mueve.</p></article>
+        <article class="cat"><span class="cat__icon"><svg class="ico"><use href="#i-shield"/></svg></span><h3>Premio Fair Play</h3><p>Juego limpio y valores.</p></article>
       </div>
     </div>
   </section>
@@ -283,7 +346,7 @@
         <div class="field"><label>Correo de contacto</label><input type="email" name="email" placeholder="tucorreo@ejemplo.com" required /></div>
         <div class="field"><label>Cuéntanos por qué merece el premio</label><textarea name="motivo" rows="3" placeholder="Logros, méritos y motivos de la postulación…"></textarea></div>
         <button type="submit" class="btn btn--dark btn--lg btn--block">Enviar inscripción</button>
-        <p class="reg__note" id="regNote" hidden>✓ ¡Inscripción recibida! Te contactaremos pronto. (Demo)</p>
+        <p class="reg__note" id="regNote" hidden><svg class="ico ico--inline"><use href="#i-check"/></svg> ¡Inscripción recibida! Te contactaremos pronto. (Demo)</p>
       </form>
     </div>
   </section>
@@ -306,10 +369,10 @@
       <div class="live__feed">
         <h3>Minuto a minuto</h3>
         <ul class="feed">
-          <li><span>22:05</span> 🏆 ¡Se entrega el premio al <strong>Deportista del Año</strong>!</li>
-          <li><span>21:48</span> 🎤 Panel «El futuro del deporte» en escena.</li>
-          <li><span>21:15</span> ⭐ Conferencia magistral «Mentalidad de campeón».</li>
-          <li><span>20:30</span> 🥇 Primera ronda de premiaciones en curso.</li>
+          <li><span>22:05</span><span class="feed__txt"><svg class="ico ico--inline"><use href="#i-trophy"/></svg> ¡Se entrega el premio al <strong>Deportista del Año</strong>!</span></li>
+          <li><span>21:48</span><span class="feed__txt"><svg class="ico ico--inline"><use href="#i-mic"/></svg> Panel «El futuro del deporte» en escena.</span></li>
+          <li><span>21:15</span><span class="feed__txt"><svg class="ico ico--inline"><use href="#i-star"/></svg> Conferencia magistral «Mentalidad de campeón».</span></li>
+          <li><span>20:30</span><span class="feed__txt"><svg class="ico ico--inline"><use href="#i-medal"/></svg> Primera ronda de premiaciones en curso.</span></li>
         </ul>
       </div>
     </div>
@@ -326,12 +389,12 @@
       <div class="winners">
         <article class="winner winner--main">
           <div class="winner__photo"></div>
-          <div class="winner__info"><span class="winner__cat">🏆 Deportista del Año</span><h3>Nombre del Ganador</h3><p>Por una temporada histórica y un palmarés que inspira a toda una generación.</p></div>
+          <div class="winner__info"><span class="winner__cat"><svg class="ico ico--inline"><use href="#i-trophy"/></svg> Deportista del Año</span><h3>Nombre del Ganador</h3><p>Por una temporada histórica y un palmarés que inspira a toda una generación.</p></div>
         </article>
-        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">🥇 Revelación</span><h3>Talento del Año</h3></div></article>
-        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">👟 Mejor Entrenador</span><h3>Estratega del Año</h3></div></article>
-        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">⚽ Deporte de Equipo</span><h3>El Mejor Colectivo</h3></div></article>
-        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">🌟 Trayectoria</span><h3>Toda una Leyenda</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat"><svg class="ico ico--inline"><use href="#i-star"/></svg> Revelación</span><h3>Talento del Año</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat"><svg class="ico ico--inline"><use href="#i-whistle"/></svg> Mejor Entrenador</span><h3>Estratega del Año</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat"><svg class="ico ico--inline"><use href="#i-ball"/></svg> Deporte de Equipo</span><h3>El Mejor Colectivo</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat"><svg class="ico ico--inline"><use href="#i-crown"/></svg> Trayectoria</span><h3>Toda una Leyenda</h3></div></article>
       </div>
     </div>
   </section>
@@ -369,18 +432,18 @@
         <h2 class="section__title">Ubicación del evento</h2>
         <p class="loc__place"><strong>Teatro de la Ciudad</strong><br/>Ciudad de Florida · Uruguay</p>
         <ul class="loc__meta">
-          <li>📅 Sábado 14 de noviembre de 2026</li>
-          <li>🕗 20:00 h · Alfombra roja desde las 19:00 h</li>
-          <li>🎩 Código de vestimenta: etiqueta formal</li>
-          <li>🅿️ Estacionamiento disponible para invitados</li>
+          <li><svg class="ico ico--inline"><use href="#i-calendar"/></svg> Sábado 14 de noviembre de 2026</li>
+          <li><svg class="ico ico--inline"><use href="#i-clock"/></svg> 20:00 h · Alfombra roja desde las 19:00 h</li>
+          <li><svg class="ico ico--inline"><use href="#i-shirt"/></svg> Código de vestimenta: etiqueta formal</li>
+          <li><svg class="ico ico--inline"><use href="#i-car"/></svg> Estacionamiento disponible para invitados</li>
         </ul>
-        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--gold">Abrir en mapas</a>
+        <a href="https://www.google.com/maps/search/?api=1&amp;query=Teatro+25+de+Agosto+Florida+Uruguay" target="_blank" rel="noopener" class="btn btn--gold">Abrir en mapas</a>
       </div>
       <div class="loc__map">
         <iframe
-          title="Mapa del evento"
-          src="https://www.openstreetmap.org/export/embed.html?bbox=-77.05%2C-12.06%2C-77.02%2C-12.03&amp;layer=mapnik"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          title="Mapa del evento — Teatro de la Ciudad, Florida, Uruguay"
+          src="https://www.google.com/maps?q=Teatro%2025%20de%20Agosto%2C%20Florida%2C%20Uruguay&amp;z=15&amp;hl=es&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -396,7 +459,7 @@
         <input type="email" placeholder="Tu correo para recibir novedades" required />
         <button type="submit" class="btn btn--dark">Avísame</button>
       </form>
-      <p class="reg__note reg__note--center" id="notifyNote" hidden>✓ ¡Listo! Serás de los primeros en enterarte. (Demo)</p>
+      <p class="reg__note reg__note--center" id="notifyNote" hidden><svg class="ico ico--inline"><use href="#i-check"/></svg> ¡Listo! Serás de los primeros en enterarte. (Demo)</p>
     </div>
   </section>
 
@@ -434,6 +497,6 @@
     </div>
   </footer>
 
-  <script src="js/main.js?v=20260629c"></script>
+  <script src="js/main.js?v=20260629m"></script>
 </body>
 </html>

@@ -37,6 +37,70 @@
   window.addEventListener('scroll', onScroll);
   onScroll();
 
+  /* ---------- Scrollspy: marca la sección activa en el nav ---------- */
+  const navList = document.getElementById('navLinks');
+  const spyLinks = Array.from(navList.querySelectorAll('a'));
+  const spyMap = new Map();
+  spyLinks.forEach((a) => {
+    const id = a.getAttribute('href');
+    if (id && id.startsWith('#')) {
+      const sec = document.querySelector(id);
+      if (sec) spyMap.set(sec, a);
+    }
+  });
+  const moreGroup = navList.querySelector('.nav__more');
+  if ('IntersectionObserver' in window && spyMap.size) {
+    const spy = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            spyLinks.forEach((l) => l.classList.remove('is-active'));
+            const link = spyMap.get(entry.target);
+            if (link) link.classList.add('is-active');
+            // resalta el botón "Más" si la sección activa vive dentro del grupo
+            if (moreGroup) {
+              moreGroup.classList.toggle('has-active', !!link && moreGroup.contains(link));
+            }
+          }
+        });
+      },
+      { rootMargin: '-45% 0px -50% 0px', threshold: 0 }
+    );
+    spyMap.forEach((_, sec) => spy.observe(sec));
+  }
+
+  /* ---------- Menú "Más": accesibilidad (aria-expanded + teclado/touch) ---------- */
+  const moreBtn = moreGroup ? moreGroup.querySelector('.nav__more-btn') : null;
+  if (moreGroup && moreBtn) {
+    const setExpanded = (open) =>
+      moreBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    // Refleja el estado real al pasar el mouse o enfocar con teclado
+    moreGroup.addEventListener('mouseenter', () => setExpanded(true));
+    moreGroup.addEventListener('mouseleave', () => {
+      if (!moreGroup.classList.contains('is-pinned')) setExpanded(false);
+    });
+    moreGroup.addEventListener('focusin', () => setExpanded(true));
+    moreGroup.addEventListener('focusout', (e) => {
+      if (!moreGroup.contains(e.relatedTarget)) {
+        setExpanded(false);
+        moreGroup.classList.remove('is-pinned');
+      }
+    });
+    // Click/tap o Enter: fija el menú abierto (touch y teclado)
+    moreBtn.addEventListener('click', () => {
+      const open = moreBtn.getAttribute('aria-expanded') === 'true';
+      moreGroup.classList.toggle('is-pinned', !open);
+      setExpanded(!open);
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && moreGroup.classList.contains('is-pinned')) {
+        moreGroup.classList.remove('is-pinned');
+        setExpanded(false);
+        moreBtn.focus();
+      }
+    });
+  }
+
   /* ---------- Menú móvil ---------- */
   const burger = document.getElementById('navBurger');
   const navLinks = document.getElementById('navLinks');
