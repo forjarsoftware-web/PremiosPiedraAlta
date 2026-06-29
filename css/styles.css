@@ -459,12 +459,8 @@ body[data-phase="posterior"] .hero__state[data-show~="posterior"]{display:block}
   .hero__actions .btn{width:100%}
   .hero__live-text{font-size:1.4rem}
   .hero__thanks{font-size:1.8rem}
-  /* "El evento": imagen única limpia en lugar del collage */
-  .about__media{height:280px;max-width:420px}
-  .about__img--1{width:100%;height:100%;border-radius:14px}
-  .about__img--2{display:none}
-  .about__badge{bottom:16px;left:14px;padding:13px 20px}
-  .about__badge strong{font-size:1.6rem}
+  /* "El evento": en celular ocultamos las fotos y vamos directo al contenido */
+  .about__media{display:none}
   .cats,.people,.winners,.stats{grid-template-columns:1fr 1fr}
   .timeline::before{left:62px}
   .timeline__item{grid-template-columns:58px 1fr;gap:16px}
