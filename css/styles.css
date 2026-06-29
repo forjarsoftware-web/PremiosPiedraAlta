@@ -443,6 +443,7 @@ body[data-phase="posterior"] .hero__state[data-show~="posterior"]{display:block}
   .section__head{margin-bottom:46px}
   .container{padding:0 20px}
   .hero__content{padding:104px 20px 70px}
+  .hero__title{font-size:clamp(1.9rem,8.2vw,2.7rem);letter-spacing:0;line-height:1.05}
   .hero__edition{letter-spacing:.28em;font-size:.7rem}
   .hero__subtitle{font-size:1rem}
   .hero__date{padding:14px 30px}
