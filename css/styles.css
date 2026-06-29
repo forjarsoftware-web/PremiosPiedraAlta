@@ -15,6 +15,9 @@
   --muted:#9a9aa8;
   --line:rgba(212,175,55,.22);
   --live:#e2333f;
+  --wine:#7c1019;
+  --wine-deep:#5a0c12;
+  --crimson:#b3121f;
   --shadow:0 24px 60px rgba(0,0,0,.45);
   --serif:"Cormorant Garamond",Georgia,serif;
   --sans:"Montserrat",system-ui,sans-serif;
@@ -67,8 +70,10 @@ a{color:inherit;text-decoration:none}
 .btn--ghost:hover{border-color:var(--gold);color:var(--gold)}
 .btn--dark{background:var(--ink);color:var(--cream)}
 .btn--dark:hover{background:#000;transform:translateY(-2px)}
-.btn--live{background:var(--live);color:#fff;box-shadow:0 10px 28px rgba(226,51,63,.34)}
-.btn--live:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn--live{background:linear-gradient(135deg,var(--crimson),var(--wine));color:var(--cream);
+  border-color:rgba(212,175,55,.4);box-shadow:0 10px 28px rgba(124,16,25,.42)}
+.btn--live:hover{transform:translateY(-2px);filter:brightness(1.1);
+  box-shadow:0 16px 36px rgba(124,16,25,.5)}
 
 /* ---------- Live dot ---------- */
 .live-dot{width:9px;height:9px;border-radius:50%;background:var(--live);display:inline-block;
@@ -182,8 +187,8 @@ a{color:inherit;text-decoration:none}
 
 .hero__actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-.hero__live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(226,51,63,.12);
-  border:1px solid rgba(226,51,63,.4);color:#ff7a83;padding:10px 22px;border-radius:40px;
+.hero__live-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(124,16,25,.22);
+  border:1px solid rgba(212,175,55,.34);color:var(--gold-soft);padding:10px 22px;border-radius:40px;
   font-weight:600;letter-spacing:.14em;font-size:.78rem;margin-bottom:18px}
 .hero__live-text{font-family:var(--serif);font-size:1.7rem;color:#fff;margin-bottom:24px}
 .hero__thanks{color:var(--gold);font-size:2.2rem;font-style:italic}
@@ -195,13 +200,14 @@ a{color:inherit;text-decoration:none}
 /* ============================================================
    LIVE BAR
    ============================================================ */
-.live-bar{position:sticky;top:0;z-index:80;background:linear-gradient(90deg,#7c1019,#e2333f);
-  display:none}
+.live-bar{position:sticky;top:0;z-index:80;background:linear-gradient(90deg,var(--wine-deep),var(--wine));
+  border-bottom:1px solid rgba(212,175,55,.3);display:none}
 .live-bar__inner{max-width:var(--maxw);margin:0 auto;padding:11px 24px;display:flex;
-  align-items:center;gap:16px;color:#fff;font-size:.84rem}
-.live-bar__text{font-weight:700;letter-spacing:.16em}
+  align-items:center;gap:16px;color:var(--cream);font-size:.84rem}
+.live-bar__text{font-weight:700;letter-spacing:.16em;color:var(--gold-soft)}
 .live-bar__now{opacity:.92}
-.live-bar__link{margin-left:auto;font-weight:600;border-bottom:1px solid rgba(255,255,255,.6)}
+.live-bar__link{margin-left:auto;font-weight:600;color:var(--gold-soft);
+  border-bottom:1px solid rgba(212,175,55,.55)}
 
 /* ============================================================
    SECCIONES GENERALES
@@ -531,8 +537,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .winner--main{grid-column:span 2}
   .gallery{grid-template-columns:repeat(2,1fr)}
   .gallery__item--video{grid-column:span 2}
-  .live-bar__inner{flex-wrap:wrap;gap:8px 14px;font-size:.78rem}
-  .live-bar__now{flex-basis:100%;order:3}
+  /* Barra en directo en celular: título, categoría y CTA apilados y bien alineados */
+  .live-bar__inner{flex-wrap:wrap;gap:5px 14px;font-size:.78rem}
+  .live-bar__now{flex-basis:100%;order:2}
+  .live-bar__link{order:3;margin-left:0;margin-top:4px}
 }
 @media (max-width:560px){
   .section{padding:72px 0}
@@ -594,6 +602,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .demo-switcher__panel{width:min(82vw,260px)}
   .next__form{flex-direction:column}
   .next__form .btn{width:100%}
+  /* En vivo: el reproductor y el feed se compactan en celular */
+  .live__player{margin-bottom:26px}
+  .live__screen{gap:9px;padding:0 22px}
+  .live__screen p{font-size:1.45rem}
+  .live__screen small{font-size:.82rem;max-width:280px;line-height:1.5}
+  .live__feed{padding:22px 20px;border-radius:12px}
+  .live__feed h3{font-size:1.3rem;margin-bottom:14px}
+  /* Cada entrada: hora arriba y texto debajo para que respire sin cortes */
+  .feed li{flex-direction:column;gap:5px;padding-bottom:13px}
+  .feed li span{min-width:0}
+  .feed li span:first-child{font-size:.92rem;letter-spacing:.04em}
+  .feed__txt{font-size:.92rem;line-height:1.5}
 }
 @media (max-width:380px){
   .cats,.people{grid-template-columns:1fr}
