@@ -516,6 +516,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   .nav__links.is-open a:nth-child(8){animation-delay:.4s}
   /* "Más" se aplana en el menú móvil: todos los enlaces se listan en la columna */
   .nav__more,.nav__dropdown{display:contents}
+  /* el dropdown hereda visibility:hidden/opacity:0; al aplanarse hay que revelar los enlaces */
+  .nav__dropdown a{visibility:visible;opacity:1;transform:none}
   .nav__more-btn{display:none}
   .nav__burger{display:flex;margin-left:auto;z-index:2}
   .nav__burger.is-open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
