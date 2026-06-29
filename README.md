@@ -42,3 +42,30 @@ Próxima edición · Footer.
 - **Textos e imágenes:** directamente en `index.html` (las fotos usan Unsplash como placeholder).
 
 > Todos los contenidos (nombres, fotos, datos) son ilustrativos para la demo.
+
+## Publicar en GitHub Pages
+
+El repositorio Git ya está inicializado y con el primer commit hecho (rama `main`).
+Incluye `.nojekyll` para que GitHub sirva `css/` y `js/` sin procesarlos. Solo falta
+crear el repo remoto y hacer push:
+
+**Opción A — con la web de GitHub (sin instalar nada):**
+1. Entra a <https://github.com/new> y crea un repositorio (ej. `premios-piedra-alta`). No agregues README ni .gitignore.
+2. En esta carpeta ejecuta (reemplaza `TU-USUARIO`):
+   ```bash
+   git remote add origin https://github.com/TU-USUARIO/premios-piedra-alta.git
+   git push -u origin main
+   ```
+3. En el repo: **Settings → Pages → Build and deployment → Source: "Deploy from a branch"**, rama `main`, carpeta `/ (root)` → **Save**.
+4. En ~1 min estará en `https://TU-USUARIO.github.io/premios-piedra-alta/`.
+
+**Opción B — con GitHub CLI (`gh`):**
+```bash
+brew install gh        # si no lo tienes
+gh auth login          # inicia sesión una vez
+gh repo create premios-piedra-alta --public --source=. --remote=origin --push
+gh api -X POST repos/:owner/premios-piedra-alta/pages -f source[branch]=main -f source[path]=/
+```
+
+> Las rutas del sitio son relativas, así que funciona igual en la raíz del dominio
+> o en un subdirectorio (`usuario.github.io/repo/`).
