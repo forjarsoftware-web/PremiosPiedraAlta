@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premios Piedra Alta al Deporte — La gran gala anual de la Intendencia de Florida que celebra la excelencia deportiva. Información, agenda, inscripciones y galería del evento." />
+  <title>Premios Piedra Alta al Deporte 2026 · Intendencia de Florida</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="logo.jpeg" />
+</head>
+<body data-phase="previo">
+
+  <!-- ============ PANEL DEMO: Selector de fase ============ -->
+  <div class="demo-switcher" id="demoSwitcher">
+    <button class="demo-switcher__toggle" id="demoToggle" aria-label="Panel de demostración">
+      <span class="demo-switcher__dot"></span> Demo
+    </button>
+    <div class="demo-switcher__panel">
+      <p class="demo-switcher__title">Vista de demostración</p>
+      <p class="demo-switcher__hint">Cambia la fase del evento para presentar cada escenario al cliente.</p>
+      <div class="demo-switcher__options">
+        <button data-phase-btn="previo" class="is-active">
+          <strong>Previo</strong><span>Inscripciones abiertas</span>
+        </button>
+        <button data-phase-btn="encurso">
+          <strong>En curso</strong><span>Transmisión en vivo</span>
+        </button>
+        <button data-phase-btn="posterior">
+          <strong>Posterior</strong><span>Premiados y galería</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__brand">
+        <span class="nav__brand-name">Piedra&nbsp;Alta</span>
+        <span class="nav__brand-tag">Premios al Deporte</span>
+      </a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">El evento</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#conferencias">Conferencias</a>
+        <a href="#autoridades">Autoridades</a>
+        <a href="#galeria">Galería</a>
+        <a href="#ubicacion">Ubicación</a>
+      </nav>
+      <a href="#inscripcion" class="btn btn--gold nav__cta" data-show="previo">Inscríbete</a>
+      <a href="#vivo" class="btn btn--live nav__cta" data-show="encurso"><span class="live-dot"></span>En vivo</a>
+      <a href="#premiados" class="btn btn--gold nav__cta" data-show="posterior">Ver premiados</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menú"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__bg"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <p class="hero__edition">VI Edición · Gala Anual · Intendencia de Florida</p>
+      <span class="hero__emblem"><img src="logo.jpeg" alt="Premios Piedra Alta al Deporte" /></span>
+      <h1 class="hero__title">Premios <span>Piedra Alta</span><br/>al Deporte</h1>
+      <p class="hero__subtitle">La noche que celebra a quienes inspiran a todo un departamento a través del deporte.</p>
+
+      <!-- Estado PREVIO -->
+      <div class="hero__state" data-show="previo">
+        <div class="hero__date">
+          <span>Sábado</span>
+          <strong>14 · Nov</strong>
+          <span>2026 · 20:00 h</span>
+        </div>
+        <div class="countdown" id="countdown" aria-label="Cuenta regresiva">
+          <div><b id="cd-days">00</b><i>Días</i></div>
+          <div><b id="cd-hours">00</b><i>Horas</i></div>
+          <div><b id="cd-mins">00</b><i>Min</i></div>
+          <div><b id="cd-secs">00</b><i>Seg</i></div>
+        </div>
+        <div class="hero__actions">
+          <a href="#inscripcion" class="btn btn--gold btn--lg">Inscribir candidatura</a>
+          <a href="#agenda" class="btn btn--ghost btn--lg">Ver agenda</a>
+        </div>
+      </div>
+
+      <!-- Estado EN CURSO -->
+      <div class="hero__state" data-show="encurso">
+        <div class="hero__live-badge"><span class="live-dot"></span> EL EVENTO ESTÁ EN CURSO</div>
+        <p class="hero__live-text">La gala se está transmitiendo en vivo en este momento.</p>
+        <div class="hero__actions">
+          <a href="#vivo" class="btn btn--live btn--lg"><span class="live-dot"></span> Ver transmisión</a>
+          <a href="#agenda" class="btn btn--ghost btn--lg">Seguir la agenda</a>
+        </div>
+      </div>
+
+      <!-- Estado POSTERIOR -->
+      <div class="hero__state" data-show="posterior">
+        <p class="hero__live-text hero__thanks">¡Gracias por una noche inolvidable!</p>
+        <p class="hero__subtitle" style="margin-top:0">Ya conocemos a los grandes ganadores de esta edición.</p>
+        <div class="hero__actions">
+          <a href="#premiados" class="btn btn--gold btn--lg">Conocer a los premiados</a>
+          <a href="#galeria" class="btn btn--ghost btn--lg">Ver galería</a>
+        </div>
+      </div>
+    </div>
+    <a href="#sobre" class="hero__scroll" aria-label="Desplázate">▾</a>
+  </section>
+
+  <!-- ============ BANNER ESTADO EN CURSO ============ -->
+  <div class="live-bar" data-show="encurso">
+    <div class="live-bar__inner">
+      <span class="live-dot"></span>
+      <span class="live-bar__text">TRANSMISIÓN EN DIRECTO</span>
+      <span class="live-bar__now" id="liveNow">Categoría en escena: <strong>Deportista del Año</strong></span>
+      <a href="#vivo" class="live-bar__link">Ver ahora →</a>
+    </div>
+  </div>
+
+  <!-- ============ SOBRE EL EVENTO ============ -->
+  <section class="section about" id="sobre">
+    <div class="container about__grid">
+      <div class="about__media">
+        <div class="about__img about__img--1"></div>
+        <div class="about__img about__img--2"></div>
+        <div class="about__badge"><strong>+1.200</strong><span>Invitados</span></div>
+      </div>
+      <div class="about__text">
+        <p class="eyebrow">El evento</p>
+        <h2 class="section__title">Una gala que honra el esfuerzo, el talento y la pasión</h2>
+        <p>Premios al Deporte es la ceremonia anual más prestigiosa que reconoce a los deportistas, entrenadores, instituciones y personas que han dejado huella durante el año. Una velada de etiqueta que reúne a las grandes figuras del deporte nacional.</p>
+        <p>Cada edición combina la emoción de la premiación con conferencias inspiradoras, presentaciones en vivo y el encuentro de toda una comunidad unida por el deporte.</p>
+        <div class="stats">
+          <div class="stat"><b>16</b><span>Categorías</span></div>
+          <div class="stat"><b>6ª</b><span>Edición</span></div>
+          <div class="stat"><b>40+</b><span>Nominados</span></div>
+          <div class="stat"><b>1</b><span>Noche memorable</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AGENDA ============ -->
+  <section class="section section--dark" id="agenda">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Programa de la noche</p>
+        <h2 class="section__title">Agenda del evento</h2>
+        <p class="section__lead">Sábado 14 de noviembre de 2026 · Teatro de la Ciudad de Florida</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__time">19:00</span>
+          <div class="timeline__body"><h3>Alfombra roja</h3><p>Recepción de invitados, prensa y sesión de fotografías oficial.</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__time">20:00</span>
+          <div class="timeline__body"><h3>Apertura de la gala</h3><p>Acto inaugural y palabras de bienvenida de las autoridades.</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__time">20:30</span>
+          <div class="timeline__body"><h3>Primera ronda de premiaciones</h3><p>Entrega de las primeras ocho categorías de la noche.</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__time">21:15</span>
+          <div class="timeline__body"><h3>Conferencia magistral</h3><p>«Mentalidad de campeón», a cargo de una figura invitada de talla internacional.</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__time">22:00</span>
+          <div class="timeline__body"><h3>Segunda ronda y premio mayor</h3><p>Entrega del galardón al Deportista del Año y reconocimiento a la trayectoria.</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__time">23:00</span>
+          <div class="timeline__body"><h3>Cierre y brindis</h3><p>Show musical en vivo y cóctel de celebración.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CATEGORÍAS ============ -->
+  <section class="section" id="categorias">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Reconocimientos</p>
+        <h2 class="section__title">Categorías de premiación</h2>
+        <p class="section__lead">Dieciséis galardones que abarcan todas las disciplinas y protagonistas del deporte.</p>
+      </div>
+      <div class="cats">
+        <article class="cat"><span class="cat__icon">🏆</span><h3>Deportista del Año</h3><p>El máximo galardón de la noche.</p></article>
+        <article class="cat"><span class="cat__icon">🥇</span><h3>Revelación</h3><p>El talento emergente del año.</p></article>
+        <article class="cat"><span class="cat__icon">👟</span><h3>Mejor Entrenador</h3><p>Liderazgo y estrategia.</p></article>
+        <article class="cat"><span class="cat__icon">⚽</span><h3>Deporte de Equipo</h3><p>La mejor colectividad.</p></article>
+        <article class="cat"><span class="cat__icon">♿</span><h3>Deporte Paralímpico</h3><p>Superación sin límites.</p></article>
+        <article class="cat"><span class="cat__icon">🌟</span><h3>Trayectoria</h3><p>Toda una vida en el deporte.</p></article>
+        <article class="cat"><span class="cat__icon">💪</span><h3>Mejor Afición</h3><p>El aliento que mueve.</p></article>
+        <article class="cat"><span class="cat__icon">🏅</span><h3>Premio Fair Play</h3><p>Juego limpio y valores.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONFERENCIAS ============ -->
+  <section class="section section--dark" id="conferencias">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Más que una premiación</p>
+        <h2 class="section__title">Conferencias inspiradoras</h2>
+        <p class="section__lead">Charlas con referentes que comparten su visión sobre el éxito, el deporte y la vida.</p>
+      </div>
+      <div class="talks">
+        <article class="talk">
+          <div class="talk__photo talk__photo--1"></div>
+          <div class="talk__body">
+            <span class="talk__tag">Conferencia magistral · 21:15</span>
+            <h3>Mentalidad de campeón</h3>
+            <p>Una conversación sobre disciplina, resiliencia y la mentalidad que separa a los grandes del resto.</p>
+            <span class="talk__speaker">Ponente internacional invitado</span>
+          </div>
+        </article>
+        <article class="talk">
+          <div class="talk__photo talk__photo--2"></div>
+          <div class="talk__body">
+            <span class="talk__tag">Panel · 21:45</span>
+            <h3>El futuro del deporte</h3>
+            <p>Tecnología, formación y nuevas generaciones: hacia dónde se dirige el deporte nacional.</p>
+            <span class="talk__speaker">Panel de especialistas</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AUTORIDADES ============ -->
+  <section class="section" id="autoridades">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Presencia destacada</p>
+        <h2 class="section__title">Autoridades presentes</h2>
+        <p class="section__lead">La gala reúne a las principales figuras institucionales y del mundo deportivo.</p>
+      </div>
+      <div class="people">
+        <figure class="person"><div class="person__photo"></div><figcaption><strong>Autoridad Deportiva Nacional</strong><span>Presidencia del Comité</span></figcaption></figure>
+        <figure class="person"><div class="person__photo"></div><figcaption><strong>Ministerio del Deporte</strong><span>Representación oficial</span></figcaption></figure>
+        <figure class="person"><div class="person__photo"></div><figcaption><strong>Federaciones Deportivas</strong><span>Invitados de honor</span></figcaption></figure>
+        <figure class="person"><div class="person__photo"></div><figcaption><strong>Comité Organizador</strong><span>Dirección del evento</span></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSCRIPCIÓN (solo previo) ============ -->
+  <section class="section section--gold" id="inscripcion" data-show="previo">
+    <div class="container reg__grid">
+      <div class="reg__info">
+        <p class="eyebrow eyebrow--dark">Inscripciones abiertas</p>
+        <h2 class="section__title">Postula una candidatura</h2>
+        <p>¿Conoces a un deportista, equipo o entrenador que merece ser reconocido? Las inscripciones para esta edición están abiertas. Completa el formulario y nuestro comité evaluará cada propuesta.</p>
+        <ul class="reg__list">
+          <li>Cierre de inscripciones: <strong>10 de octubre de 2026</strong></li>
+          <li>Anuncio de nominados: <strong>25 de octubre de 2026</strong></li>
+          <li>Postulación gratuita y 100% en línea</li>
+        </ul>
+      </div>
+      <form class="reg__form" id="regForm" novalidate>
+        <h3>Formulario de inscripción</h3>
+        <div class="field"><label>Nombre del postulante / candidatura</label><input type="text" name="nombre" placeholder="Ej. María Pérez" required /></div>
+        <div class="field"><label>Categoría</label>
+          <select name="categoria" required>
+            <option value="">Selecciona una categoría…</option>
+            <option>Deportista del Año</option>
+            <option>Revelación</option>
+            <option>Mejor Entrenador</option>
+            <option>Deporte de Equipo</option>
+            <option>Trayectoria</option>
+            <option>Premio Fair Play</option>
+          </select>
+        </div>
+        <div class="field"><label>Correo de contacto</label><input type="email" name="email" placeholder="tucorreo@ejemplo.com" required /></div>
+        <div class="field"><label>Cuéntanos por qué merece el premio</label><textarea name="motivo" rows="3" placeholder="Logros, méritos y motivos de la postulación…"></textarea></div>
+        <button type="submit" class="btn btn--dark btn--lg btn--block">Enviar inscripción</button>
+        <p class="reg__note" id="regNote" hidden>✓ ¡Inscripción recibida! Te contactaremos pronto. (Demo)</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ EN VIVO (solo en curso) ============ -->
+  <section class="section section--dark" id="vivo" data-show="encurso">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow"><span class="live-dot"></span> En directo</p>
+        <h2 class="section__title">Transmisión en vivo</h2>
+        <p class="section__lead">Sigue la gala minuto a minuto desde donde estés.</p>
+      </div>
+      <div class="live__player">
+        <div class="live__screen">
+          <span class="live-dot live-dot--lg"></span>
+          <p>Señal en vivo</p>
+          <small>Aquí se integrará el reproductor (YouTube / Vimeo / streaming propio)</small>
+        </div>
+      </div>
+      <div class="live__feed">
+        <h3>Minuto a minuto</h3>
+        <ul class="feed">
+          <li><span>22:05</span> 🏆 ¡Se entrega el premio al <strong>Deportista del Año</strong>!</li>
+          <li><span>21:48</span> 🎤 Panel «El futuro del deporte» en escena.</li>
+          <li><span>21:15</span> ⭐ Conferencia magistral «Mentalidad de campeón».</li>
+          <li><span>20:30</span> 🥇 Primera ronda de premiaciones en curso.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PREMIADOS (solo posterior) ============ -->
+  <section class="section" id="premiados" data-show="posterior">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Edición 2026</p>
+        <h2 class="section__title">Nuestros premiados</h2>
+        <p class="section__lead">Felicitamos a los grandes protagonistas que hicieron historia esta noche.</p>
+      </div>
+      <div class="winners">
+        <article class="winner winner--main">
+          <div class="winner__photo"></div>
+          <div class="winner__info"><span class="winner__cat">🏆 Deportista del Año</span><h3>Nombre del Ganador</h3><p>Por una temporada histórica y un palmarés que inspira a toda una generación.</p></div>
+        </article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">🥇 Revelación</span><h3>Talento del Año</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">👟 Mejor Entrenador</span><h3>Estratega del Año</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">⚽ Deporte de Equipo</span><h3>El Mejor Colectivo</h3></div></article>
+        <article class="winner"><div class="winner__photo"></div><div class="winner__info"><span class="winner__cat">🌟 Trayectoria</span><h3>Toda una Leyenda</h3></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="section section--dark" id="galeria">
+    <div class="container">
+      <div class="section__head">
+        <p class="eyebrow">Recuerdos</p>
+        <h2 class="section__title" data-show="posterior">Galería del evento</h2>
+        <h2 class="section__title" data-show="previo encurso">Galería de ediciones anteriores</h2>
+        <p class="section__lead">Los mejores momentos capturados en imágenes y video.</p>
+      </div>
+      <div class="gallery">
+        <div class="gallery__item gallery__item--video">
+          <div class="gallery__play">▶</div>
+          <span class="gallery__label">Resumen oficial</span>
+        </div>
+        <div class="gallery__item g1"></div>
+        <div class="gallery__item g2"></div>
+        <div class="gallery__item g3"></div>
+        <div class="gallery__item g4"></div>
+        <div class="gallery__item g5"></div>
+        <div class="gallery__item g6"></div>
+        <div class="gallery__item g7"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="section" id="ubicacion">
+    <div class="container loc__grid">
+      <div class="loc__text">
+        <p class="eyebrow">Cómo llegar</p>
+        <h2 class="section__title">Ubicación del evento</h2>
+        <p class="loc__place"><strong>Teatro de la Ciudad</strong><br/>Ciudad de Florida · Uruguay</p>
+        <ul class="loc__meta">
+          <li>📅 Sábado 14 de noviembre de 2026</li>
+          <li>🕗 20:00 h · Alfombra roja desde las 19:00 h</li>
+          <li>🎩 Código de vestimenta: etiqueta formal</li>
+          <li>🅿️ Estacionamiento disponible para invitados</li>
+        </ul>
+        <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--gold">Abrir en mapas</a>
+      </div>
+      <div class="loc__map">
+        <iframe
+          title="Mapa del evento"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=-77.05%2C-12.06%2C-77.02%2C-12.03&amp;layer=mapnik"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PRÓXIMA EDICIÓN (solo posterior) ============ -->
+  <section class="section section--gold next" data-show="posterior">
+    <div class="container next__inner">
+      <p class="eyebrow eyebrow--dark">Nos vemos pronto</p>
+      <h2 class="section__title">La próxima edición ya se prepara</h2>
+      <p>Esta noche quedará en la memoria, pero el deporte nunca se detiene. Te invitamos a acompañarnos en la <strong>VII Edición de los Premios al Deporte</strong>.</p>
+      <div class="next__date">Noviembre 2027</div>
+      <form class="next__form" id="notifyForm">
+        <input type="email" placeholder="Tu correo para recibir novedades" required />
+        <button type="submit" class="btn btn--dark">Avísame</button>
+      </form>
+      <p class="reg__note reg__note--center" id="notifyNote" hidden>✓ ¡Listo! Serás de los primeros en enterarte. (Demo)</p>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <img src="logo.jpeg" alt="Premios Piedra Alta al Deporte" />
+        <p>La gala anual de la Intendencia de Florida que celebra la excelencia deportiva.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Evento</h4>
+        <a href="#sobre">El evento</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#ubicacion">Ubicación</a>
+      </div>
+      <div class="footer__col">
+        <h4>Participa</h4>
+        <a href="#inscripcion">Inscripciones</a>
+        <a href="#galeria">Galería</a>
+        <a href="#conferencias">Conferencias</a>
+      </div>
+      <div class="footer__col">
+        <h4>Síguenos</h4>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>© 2026 Premios Piedra Alta al Deporte · Intendencia de Florida · Demo de presentación.</p>
+      <p>Diseño de propuesta — todos los contenidos son ilustrativos.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
