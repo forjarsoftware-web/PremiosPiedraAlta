@@ -40,9 +40,15 @@
   /* ---------- Menú móvil ---------- */
   const burger = document.getElementById('navBurger');
   const navLinks = document.getElementById('navLinks');
-  burger.addEventListener('click', () => navLinks.classList.toggle('is-open'));
+  const toggleMenu = (open) => {
+    const willOpen = open ?? !navLinks.classList.contains('is-open');
+    navLinks.classList.toggle('is-open', willOpen);
+    burger.classList.toggle('is-open', willOpen);
+    burger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+  };
+  burger.addEventListener('click', () => toggleMenu());
   navLinks.querySelectorAll('a').forEach((a) =>
-    a.addEventListener('click', () => navLinks.classList.remove('is-open'))
+    a.addEventListener('click', () => toggleMenu(false))
   );
 
   /* ---------- Cuenta regresiva ---------- */
